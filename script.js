@@ -25,6 +25,8 @@ function generatePassword() {
     cointainerPassword.classList.remove("hide");
     password.innerHTML = pass;
     novaSenha = pass;
+
+    tooltip.innerHTML = "Clique para copiar 📋";
 }
 
 function copyPassword() {
