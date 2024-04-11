@@ -3,6 +3,7 @@ let buttonElement = document.querySelector("#button");
 let sizePassword = document.querySelector("#valor");
 let password = document.querySelector("#password");
 let cointainerPassword = document.querySelector("#container-password");
+let tooltip = document.querySelector(".tooltip");
 
 let charset =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*-_123456789";
@@ -28,4 +29,8 @@ function generatePassword() {
 
 function copyPassword() {
     navigator.clipboard.writeText(novaSenha);
+
+    if (navigator.clipboard.writeText(novaSenha)) {
+        tooltip.innerHTML = "Senha copiada ✅";
+    }
 }
